@@ -1,46 +1,25 @@
 import { FunctionComponent, InputHTMLAttributes } from 'react';
-
+interface InputProps {
+  name: string;
+  type: string;
+  placeholder: string;
+}
 const Input: FunctionComponent<
-  InputHTMLAttributes<
-    HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement
-  >
+  InputHTMLAttributes<HTMLInputElement> & InputProps
 > = (props) => {
-  const classNames = [
-    'transition',
-    'rounded-lg',
-    'placeholder-zinc-400',
-    'caret-zinc-400',
-    'border-slate-300',
-    'focus:border-slate-400',
-    'shadow',
-    'hover:shadow-md',
-    'focus:shadow-md',
-    'focus:ring-0',
-    'focus:outline-none',
-    'py-2',
-    'px-2',
-    'font-medium',
-  ].join(' ');
+  const { name, type, placeholder } = props;
 
-  const { children, className, type, value } = props;
-
-  switch (type) {
-    case 'select':
-      return (
-        <select {...props} className={`${classNames} ${className}`}>
-          {children}
-        </select>
-      );
-
-    case 'textarea':
-      return (
-        <textarea {...props} rows={7} className={`${classNames} ${className}`}>
-          {value}
-        </textarea>
-      );
-  }
-
-  return <input {...props} className={`${classNames} ${className}`} />;
+  return (
+    <div className='flex flex-col text-base-content'>
+      <input
+        {...props}
+        className='w-full max-w-xs input input-bordered input-primary'
+        placeholder={placeholder}
+        name={name}
+        type={type}
+      />
+    </div>
+  );
 };
 
 export default Input;

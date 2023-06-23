@@ -7,70 +7,76 @@ import { ISourceOptions } from 'tsparticles-engine';
 const particleOptions: ISourceOptions = {
   particles: {
     number: {
-      value: 80,
-      limit: 200,
-    },
-    interactivity: {
-      detect_on: 'window',
-      events: {
-        onHover: {
-          enable: true,
-          mode: 'repulse',
-        },
-        onClick: {
-          enable: true,
-          mode: 'push',
-        },
+      value: 40,
+      density: {
+        enable: true,
+        value_area: 700,
       },
+      max: 40,
     },
     color: {
-      value: '#FFFFFF',
+      value:  "#000000",
     },
     shape: {
-      type: 'circle',
+      type: "circle",
+      polygon: {
+        nb_sides: 5,
+      },
     },
     opacity: {
-      value: {
-        max: 0.6,
-        min: 0.1,
-      },
-      random: true,
+      value: 0.1,
+      random: false,
       anim: {
         enable: false,
-        speed: 0.2,
+        speed: 0.1,
         opacity_min: 0.1,
         sync: false,
       },
     },
     size: {
-      value: 8,
-      random: {
-        enable: true,
-        minimumValue: 0.1,
+      value: {
+        min: 4,
+        max: 14,
       },
+      random: true,
+    },
+    line_linked: {
+      enable: false,
+      distance: 80,
+      color:  "#000000",
+      opacity: 0.4,
+      width: 1,
     },
     move: {
       enable: true,
       speed: {
-        max: 8,
-        min: 3,
+        min: 0.3,
+        max: 2.2,
       },
-      direction: 'bottom-right',
+      direction: "bottom",
       random: true,
       straight: true,
-      out_mode: 'out',
+      out_mode: "out",
       bounce: false,
       attract: {
-        enable: true,
-        distance: 200,
+        enable: false,
+        rotateX: 600,
+        rotateY: 1200,
       },
     },
   },
   interactivity: {
-    detect_on: 'canvas',
+    detect_on: "window",
+    events: {
+      onclick: {
+        enable: true,
+        mode: "push",
+      },
+      resize: true,
+    },
     modes: {
       grab: {
-        distance: 200,
+        distance: 100,
         line_linked: {
           opacity: 1,
         },
@@ -79,10 +85,6 @@ const particleOptions: ISourceOptions = {
         distance: 400,
         duration: 4,
         opacity: 0.8,
-      },
-      repulse: {
-        distance: 200,
-        duration: 0.4,
       },
       push: {
         particles_nb: 4,
@@ -93,10 +95,9 @@ const particleOptions: ISourceOptions = {
       },
     },
   },
-
   background: {
     color: {
-      value: '#0284c7',
+      value: "#0284c7",
     },
     opacity: 0,
   },
