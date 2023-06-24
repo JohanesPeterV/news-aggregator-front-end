@@ -15,10 +15,10 @@ const particleOptions: ISourceOptions = {
       max: 40,
     },
     color: {
-      value:  "#000000",
+      value: '#4bc375',
     },
     shape: {
-      type: "circle",
+      type: 'circle',
       polygon: {
         nb_sides: 5,
       },
@@ -43,7 +43,7 @@ const particleOptions: ISourceOptions = {
     line_linked: {
       enable: false,
       distance: 80,
-      color:  "#000000",
+      color: '#000000',
       opacity: 0.4,
       width: 1,
     },
@@ -53,10 +53,10 @@ const particleOptions: ISourceOptions = {
         min: 0.3,
         max: 2.2,
       },
-      direction: "bottom",
+      direction: 'bottom',
       random: true,
       straight: true,
-      out_mode: "out",
+      out_mode: 'out',
       bounce: false,
       attract: {
         enable: false,
@@ -66,11 +66,11 @@ const particleOptions: ISourceOptions = {
     },
   },
   interactivity: {
-    detect_on: "window",
+    detect_on: 'window',
     events: {
       onclick: {
         enable: true,
-        mode: "push",
+        mode: 'push',
       },
       resize: true,
     },
@@ -97,7 +97,7 @@ const particleOptions: ISourceOptions = {
   },
   background: {
     color: {
-      value: "#0284c7",
+      value: '#0284c7',
     },
     opacity: 0,
   },
@@ -113,7 +113,7 @@ const SimpleParticle: FunctionComponent = ({}) => {
     <div>
       <Particles
         options={particleOptions}
-        id="tsparticles"
+        id='tsparticles'
         init={particlesInit}
       />
     </div>
