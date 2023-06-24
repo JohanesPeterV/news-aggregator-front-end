@@ -29,17 +29,19 @@ function Home() {
   }
 
   return (
-    <div>
-      <h1>Article List</h1>
-      {articles.map((article) => (
-        <div key={article.id}>
-          <h2>{article.title}</h2>
-          <p>{article.content}</p>
-          <p>Author: {article.author}</p>
-          <p>Source: {article.source}</p>
-        </div>
-      ))}
-    </div>
+    <main className='flex flex-col items-center justify-between min-h-screen p-24'>
+      <div>
+        <h1>Article List</h1>
+        {articles.map((article) => (
+          <div key={article.id}>
+            <h2>{article.title}</h2>
+            <p>{article.content}</p>
+            <p>Author: {article.author}</p>
+            <p>Source: {article.source}</p>
+          </div>
+        ))}
+      </div>
+    </main>
   );
 }
 

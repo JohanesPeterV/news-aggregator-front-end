@@ -29,8 +29,7 @@ export const useAuth = () => {
     if (isLoading) {
       return;
     }
-    console.log(isLoading);
-    console.log(user);
+
     if (isGuestPath && user && !error) {
       router.push('/');
       return;

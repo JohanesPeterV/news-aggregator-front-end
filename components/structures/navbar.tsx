@@ -13,7 +13,7 @@ export default function Navbar() {
       error: 'Logout failed',
       success: () => {
         mutate();
-        return 'Login Success';
+        return 'Logout Success';
       },
     });
   }
