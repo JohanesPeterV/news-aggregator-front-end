@@ -1,7 +1,7 @@
 import axios from '../lib/axios';
 
+
+const BASE_PATH='/api/users'
 export default class UserService {
-  static getCurrentUser() {
-    return axios.get('/api/user');
-  }
+
 }

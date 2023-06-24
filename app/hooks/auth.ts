@@ -3,6 +3,7 @@ import { useRouter, usePathname } from 'next/navigation';
 import UserService from '../services/user-service';
 import useSWR from 'swr';
 import { guestRoutes } from '../constants/guest-routes';
+import AuthService from '../services/auth-service';
 
 export const useAuth = () => {
   const isGuestPath = guestRoutes.includes(usePathname());
@@ -14,7 +15,7 @@ export const useAuth = () => {
     isLoading,
     mutate,
   } = useSWR('/api/user', () =>
-    UserService.getCurrentUser()
+    AuthService.getCurrentUser()
       .then((res) => {
         return res.data;
       })
@@ -43,5 +44,6 @@ export const useAuth = () => {
   return {
     user,
     mutate,
+    isLoading,
   };
 };

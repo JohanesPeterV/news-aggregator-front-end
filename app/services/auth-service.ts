@@ -4,6 +4,10 @@ import RegisterParams from '../models/params/register-params';
 import GeneralService from './general-service';
 
 export default class AuthService {
+  
+  static getCurrentUser() {
+    return axios.get('/api/user');
+  }
   static withCSRF<T>(fn: Function) {
     return (args: T) => {
       GeneralService.getCSRFToken();
