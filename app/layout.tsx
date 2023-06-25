@@ -24,7 +24,13 @@ export default function RootLayout({
 
   return (
     <AuthLayout>
-      {isLoading ? <div className='w-full h-full bg-black'></div> : <></>}
+      {isLoading ? (
+        <div className='fixed top-0 flex items-center justify-center w-full h-full bg-black bg-opacity-20'>
+          <span className='loading loading-ring loading-lg'></span>
+        </div>
+      ) : (
+        <></>
+      )}
       {children}
     </AuthLayout>
   );

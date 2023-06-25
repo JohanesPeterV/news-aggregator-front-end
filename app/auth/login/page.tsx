@@ -31,6 +31,7 @@ export default function Login() {
 
       success: () => {
         mutate();
+        router.push('/');
         return 'Login Success';
       },
     });

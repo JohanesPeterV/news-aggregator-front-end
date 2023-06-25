@@ -7,18 +7,16 @@ interface InputProps {
 const Input: FunctionComponent<
   InputHTMLAttributes<HTMLInputElement> & InputProps
 > = (props) => {
-  const { name, type, placeholder } = props;
+  const { name, type, placeholder, className } = props;
 
   return (
-    <div className='flex flex-col text-base-content'>
-      <input
-        {...props}
-        className='w-full max-w-xs input input-bordered input-primary'
-        placeholder={placeholder}
-        name={name}
-        type={type}
-      />
-    </div>
+    <input
+      {...props}
+      className={`w-full input input-bordered input-primary ${className}`}
+      placeholder={placeholder}
+      name={name}
+      type={type}
+    />
   );
 };
 

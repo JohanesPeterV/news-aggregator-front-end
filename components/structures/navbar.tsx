@@ -9,10 +9,11 @@ export default function Navbar() {
   const router = useRouter();
   async function logout() {
     await toast.promise(AuthService.logout(), {
-      loading: 'Logging in',
+      loading: 'Logging Out',
       error: 'Logout failed',
       success: () => {
         mutate();
+        router.push('/auth/login');
         return 'Logout Success';
       },
     });
@@ -42,21 +43,10 @@ export default function Navbar() {
             className='menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52'
           >
             <li>
-              <a>Item 1</a>
+              <a href='/'>Home</a>
             </li>
             <li>
-              <a>Parent</a>
-              <ul className='p-2'>
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </li>
-            <li>
-              <a>Item 3</a>
+              <a href='/for-you'>For You</a>
             </li>
           </ul>
         </div>
@@ -65,27 +55,14 @@ export default function Navbar() {
       <div className='hidden navbar-center lg:flex'>
         <ul className='px-1 menu menu-horizontal'>
           <li>
-            <a>Item 1</a>
-          </li>
-          <li tabIndex={0}>
-            <details>
-              <summary>Parent</summary>
-              <ul className='p-2'>
-                <li>
-                  <a>Submenu 1</a>
-                </li>
-                <li>
-                  <a>Submenu 2</a>
-                </li>
-              </ul>
-            </details>
+            <a href='/'>Home</a>
           </li>
           <li>
-            <a>Item 3</a>
+            <a href='/for-you'>For You</a>
           </li>
         </ul>
       </div>
-      <div className='navbar-end'>
+      <div className='pr-6 navbar-end'>
         <button onClick={logout} className='text-error text-md'>
           Log out
         </button>

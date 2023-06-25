@@ -4,5 +4,3 @@ type RegisterParams = {
   password: string;
   password_confirmation: string;
 };
-
-export default RegisterParams;

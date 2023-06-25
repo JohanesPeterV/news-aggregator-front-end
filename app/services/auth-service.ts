@@ -4,7 +4,6 @@ import RegisterParams from '../models/params/register-params';
 import GeneralService from './general-service';
 
 export default class AuthService {
-  
   static getCurrentUser() {
     return axios.get('/api/user');
   }
@@ -26,12 +25,7 @@ export default class AuthService {
 
   static register = AuthService.withCSRF<RegisterParams>(
     (registerParams: RegisterParams) => {
-      return axios.post('/register', {
-        name: registerParams.name,
-        email: registerParams.email,
-        password: registerParams.password,
-        password_confirmation: registerParams.password_confirmation,
-      });
+      return axios.post('/register', registerParams);
     }
   );
 

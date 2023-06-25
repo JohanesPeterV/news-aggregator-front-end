@@ -35,6 +35,7 @@ export default function Register() {
       },
       success: () => {
         mutate();
+        router.push('/');
         return 'Register Success';
       },
     });
