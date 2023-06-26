@@ -1,6 +1,4 @@
 import axios from '../lib/axios';
-import LoginParams from '../models/params/login-params';
-import RegisterParams from '../models/params/register-params';
 import GeneralService from './general-service';
 
 export default class AuthService {

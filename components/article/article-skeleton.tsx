@@ -1,8 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
-import Article from '@/app/models/contracts/article';
-import DateFormatUtil from '@/app/utils/date-format-util';
-
-const ArticleSkeleton: React.FC<> = () => {
+const ArticleSkeleton: React.FC = () => {
   return (
     <div className='flex flex-row flex-wrap items-center justify-center mt-4 animate-pulse'>
       <h1 className='w-full pl-8 mb-6 text-xl font-medium'>Article List</h1>
