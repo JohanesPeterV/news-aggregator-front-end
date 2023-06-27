@@ -1,11 +1,11 @@
-FROM node:18
+FROM node:18-alpine
 
-WORKDIR /app  
+WORKDIR /user/src/app
 
 COPY . . 
 
 
-RUN yarn cache clean && yarn install --production
+RUN yarn install --production
 
 RUN yarn run build
 
