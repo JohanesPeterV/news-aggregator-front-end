@@ -12,12 +12,13 @@ module.exports = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      screens:{
+        'mmd': {'raw': '(max-width: 767px)'},
+        // => @media (max-width: 767px) { ... }
+  
+      }  
     },
-    screens:{
-      'mmd': {'raw': '(max-width: 767px)'},
-      // => @media (max-width: 767px) { ... }
-
-    }
+    
   },
   
   plugins: [require("daisyui")],

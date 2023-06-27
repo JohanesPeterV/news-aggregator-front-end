@@ -87,7 +87,7 @@ const ArticlePreferences: React.FC<ArticlePreferenceProps> = ({
             <div className='mb-4'>
               <h2 className='mb-2 text-lg font-bold'>Preferred Sources</h2>
               {sources.map((option) => (
-                <label key={option}>
+                <label key={option} className='mr-2'>
                   <input
                     type='checkbox'
                     value={option}
@@ -95,6 +95,7 @@ const ArticlePreferences: React.FC<ArticlePreferenceProps> = ({
                     onChange={(e) =>
                       handleCheckboxChange(e, 'preferred_sources')
                     }
+                    className='mr-2'
                   />
                   {option}
                 </label>
@@ -103,7 +104,7 @@ const ArticlePreferences: React.FC<ArticlePreferenceProps> = ({
             <div className='mb-4'>
               <h2 className='mb-2 text-lg font-bold'>Preferred Categories</h2>
               {categories.map((option) => (
-                <label key={option}>
+                <label key={option} className='mr-2'>
                   <input
                     type='checkbox'
                     value={option}
@@ -113,6 +114,7 @@ const ArticlePreferences: React.FC<ArticlePreferenceProps> = ({
                     onChange={(e) =>
                       handleCheckboxChange(e, 'preferred_categories')
                     }
+                    className='mr-2'
                   />
                   {option}
                 </label>
@@ -121,7 +123,7 @@ const ArticlePreferences: React.FC<ArticlePreferenceProps> = ({
             <div className='mb-4'>
               <h2 className='mb-2 text-lg font-bold'>Preferred Authors</h2>
               {authors.map((option) => (
-                <label key={option}>
+                <label key={option} className='mr-2'>
                   <input
                     type='checkbox'
                     value={option}
@@ -129,6 +131,7 @@ const ArticlePreferences: React.FC<ArticlePreferenceProps> = ({
                     onChange={(e) =>
                       handleCheckboxChange(e, 'preferred_authors')
                     }
+                    className='mr-2'
                   />
                   {option}
                 </label>

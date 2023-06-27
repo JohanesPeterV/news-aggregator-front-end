@@ -37,7 +37,7 @@ export default function Login() {
     });
   };
   return (
-    <div className='flex flex-col items-center justify-center h-screen login-bg '>
+    <div className='flex flex-col items-center justify-center h-screen login-bg text-'>
       <div className='absolute z-10 w-full h-screen'>
         <BubbleParticle />
       </div>
