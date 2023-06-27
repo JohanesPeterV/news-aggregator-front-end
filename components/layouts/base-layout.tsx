@@ -10,7 +10,7 @@ const BaseLayout: FunctionComponent<HTMLAttributes<HTMLDivElement>> = ({
     <html lang='en' data-theme='emerald'>
       <body className={`${inter.className}`}>
         <Toaster />
-        {children}
+        <div>{children}</div>
       </body>
     </html>
   );
