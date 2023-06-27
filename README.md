@@ -2,15 +2,33 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+1. Install Dependencies
 
 ```bash
-npm run dev
+npm i
 # or
-yarn dev
-# or
-pnpm dev
+yarn
 ```
+
+2. Update .env
+
+```bash
+NEXT_PUBLIC_BACKEND_URL=http://localhost:8000
+```
+
+3. Build Container
+
+```bash
+docker build -t news-aggregator-front-end .
+```
+
+4. Run Container
+
+```bash
+docker run -dp 3000:3000 news-aggregator-front-end .
+```
+
+5. Open http://localhost:3000/
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
